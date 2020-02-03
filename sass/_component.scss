@@ -1,0 +1,202 @@
+/* :root {  //this is like the global parent ! all stuff in here , accessible to all elements.
+    --color-primary : #eb2f64;   //this is a custom property. it is a CSS variable.
+    --color-primary-light : #FF3366;   
+    --color-primary-dark : #BA265D;
+
+    --color-grey-light-1: #faf9f9 ;
+    --color-grey-light-2: #f4f2f2 ;
+    --color-grey-light-3: #f0eeee ;
+    --color-grey-light-4: #ccc ;
+    
+    --color-grey-dark-1: #333 ;
+    --color-grey-dark-2: #777 ;
+    --color-grey-dark-3: #999 ;
+}
+  */
+
+
+
+
+//################################################## LOGO ##############################################
+.logo {
+    height: 3.25rem;
+    margin-left: 2rem;
+}
+
+
+
+
+
+//################################################## SEARCH ##############################################
+.search {
+    flex: 0 0 40%;
+
+    display: flex;
+    align-items: center;     // centers elements along the cross axis
+    justify-content: center; // centers elements along the main axis
+
+    &__input {
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        background-color: var(--color-grey-light-2);
+        border:none;
+        padding: .7rem 2rem;
+        border-radius: 100px;
+        width: 90%;
+        transition: all .4s;
+        margin-right: -3rem;
+
+        &:focus {
+            outline : none;
+            width: 100%;
+            background-color: var(--color-grey-light-3);
+        }
+
+        &::-webkit-input-placeholder {  // the alter the placeholder of a input element !
+            font-weight: 100;
+            color : var(--color-grey-light-4);
+        }
+    }
+
+    &__input:focus + &__button {  // because they are siblings
+        background-color: var(--color-grey-light-3);
+    }
+
+    &__button {
+        border: none;
+        background-color: var(--color-grey-light-2);
+
+        &:focus {
+            outline: none;
+        }
+
+        &:active { transform: translateY(2px);}  // active = clicked
+    }
+
+    &__icon {
+        height: 2rem;
+        width: 2rem;
+        fill: var(--color-grey-dark-3);   // this is how you change the color of a SVG
+    }
+}
+
+
+
+
+
+
+//################################################## USER-NAV ##############################################
+.user-nav {
+    align-self: stretch;
+
+    display: flex;
+    align-items: center;
+
+    & > * {   // select all direct children
+        display: flex;
+        align-items: center;
+
+        height: 100%;
+        padding:0 2rem;
+        cursor: pointer;
+
+        &:hover { background-color: var(--color-grey-light-2); }
+    }
+
+    
+    &__icon-box {
+        position: relative;
+    }
+
+
+    &__icon {
+        height: 2.35rem;
+        width: 2.35rem;
+        fill: var(--color-grey-dark-2);
+    }
+
+    &__notification {
+        font-size: .8rem;
+        height: 1.75rem;
+        width: 1.75rem;
+        border-radius: 100px;
+        background-color: var(--color-primary);
+        color: white;
+
+        position: absolute;
+        top: 1.1rem;
+        left: 3rem;
+        z-index: 333;
+
+        display: flex;
+        align-items: center;     // center the text vertically
+        justify-content: center; // center the text horizontally
+    }
+
+
+    &__user {
+        
+    }
+
+
+    &__user-name {
+
+    }
+
+    &__user-photo {
+        height: 4rem;
+        border-radius: 50%;
+        margin-right: 1rem;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
