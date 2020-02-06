@@ -32,10 +32,10 @@
     font-size: 1.4rem;
     height: 7rem;
     background-color: white;
-    border-bottom: 1px solid var(--color-grey-light-2);
+    border-bottom: var(--line);
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center;     // this one is set to strech by default . IMPORTANT NOTICE !!!!
 }
 
 .content {
@@ -55,14 +55,34 @@
     background-color: white;
     flex : 1; // grow as much as possible
 
-    height: 48rem;
+    // height: 48rem;
 }
 
 
+.detail {
+    font-size: 1.4rem;
+    display: flex;
+    padding: 4rem;
+    border-bottom: var(--line);
+    background-color: var(--color-grey-light-1);
+}
 
+.description {
+    flex: 0 0 60%;
+    padding: 3rem;
+    margin-right: 4rem;
+    background-color: white;
+    box-shadow: var(--shadow-light);
+}
 
-
-
+.user-reviews {
+    flex : 1 ; // strech to occupy the remaining space
+    overflow: hidden;
+ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
 
 
 

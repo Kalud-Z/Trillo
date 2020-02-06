@@ -22,13 +22,18 @@ Primary dark: #BA265D
     --color-grey-dark-1: #333 ;
     --color-grey-dark-2: #777 ;
     --color-grey-dark-3: #999 ;
+
+    --line : 1px solid var(--color-grey-light-2);
+
+    --shadow-dark : 0 2rem 6rem rgba(0, 0, 0, 0.351);
+    --shadow-light : 0 2rem 5rem rgba(0, 0, 0, 0.151);
 }
  
 * {
     margin:0;
     padding: 0;
 
-    // border: 0.3px solid yellow;
+    //  border: .3px solid yellow;
 }
 
 *,
