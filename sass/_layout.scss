@@ -15,9 +15,6 @@
   */
 
 
-
-
-
 .container {
     max-width: 120rem;
     margin: 8rem auto;
@@ -25,6 +22,12 @@
     box-shadow: 0 2rem 6rem rgba(0,0,0 , 0.3);
 
     min-height: 40rem;
+
+    @media only screen and (max-width:$bp-1200) {
+        margin : 0;
+        max-width: 100%;
+        width: 100%;
+    }
 }
 
 
@@ -36,10 +39,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;     // this one is set to strech by default . IMPORTANT NOTICE !!!!
+
+    @media only screen and (max-width: $bp-500) {
+        flex-wrap: wrap;
+        height: 11rem;
+        align-content: space-around; // this property works only on multi-line flex container !
+    }
 }
 
 .content {
     display: flex;  // display the children side by side . this is by dafault. U CAN CHANGE that. 
+
+    @media only screen and (max-width: $bp-900) {
+        flex-direction: column;
+    }
 }
 
 .sidebar {
@@ -49,7 +62,14 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;  // put equal space between elements , without margins on the extremeties.
+
+    @media only screen and (max-width: $bp-900) {
+        flex-direction:row ;
+        justify-content: space-around;
+    }
+
 }
+
 
 .hotel-view {
     background-color: white;
@@ -65,6 +85,22 @@
     padding: 4rem;
     border-bottom: var(--line);
     background-color: var(--color-grey-light-1);
+
+    @media only screen and (max-width:$bp-900) {
+        padding: 2.5rem;
+    }
+
+    @media only screen and (max-width:$bp-650) {
+        flex-direction: column;
+        padding:0 1rem;
+
+        align-items: center;     // centers elements along the cross axis
+        justify-content: center;
+
+    }
+
+
+
 }
 
 .description {
@@ -73,6 +109,20 @@
     margin-right: 4rem;
     background-color: white;
     box-shadow: var(--shadow-light);
+
+    
+    @media only screen and (max-width:$bp-900) {
+        padding-top: 2rem;
+        margin-right: 2.5rem;
+    }
+
+    @media only screen and (max-width:$bp-650) {
+        width: 100%;
+        margin: 1rem 0.3rem;
+    }
+
+
+
 }
 
 .user-reviews {

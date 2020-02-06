@@ -8,6 +8,7 @@ Primary dark: #BA265D
 
 */
 
+//###################################### VARIABLES
 
 :root {  //this is like the global parent ! all stuff in here , accessible to all elements.
     --color-primary : #eb2f64;   //this is a custom property. it is a CSS variable.
@@ -29,11 +30,20 @@ Primary dark: #BA265D
     --shadow-light : 0 2rem 5rem rgba(0, 0, 0, 0.151);
 }
  
+
+$bp-1200 : 75em; // 1200px
+$bp-1100 : 68.750em; // 1100px
+$bp-900 : 56.250em; // 1100px
+$bp-650 : 40.6em; // 650px
+$bp-584 : 36.5em; // 548px
+$bp-500 : 31.25em; // 500px
+
+
 * {
     margin:0;
     padding: 0;
 
-    //  border: .3px solid yellow;
+    //  border: .3px solid red;
 }
 
 *,
@@ -45,6 +55,15 @@ Primary dark: #BA265D
 html {
     box-sizing: border-box;
     font-size: 62.5%;
+
+    @media only screen and (max-width: $bp-1100) {
+        font-size: 50%;  // 8px / 16px = 0.5 ==> 50%
+    }
+
+    @media only screen and (max-width: $bp-584) {
+        font-size: 40%;
+    }
+
 }
 
 
