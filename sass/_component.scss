@@ -464,7 +464,7 @@ button[name='showAll'] {
     border-bottom: var(--line);
 
     display: flex;
-    flex-wrap: wrap;  //The flex container is multi-line
+    flex-wrap: wrap;  //The flex container is multi-line capable now
 
     @media only screen and (max-width:$bp-900) {
         padding: 2rem;
